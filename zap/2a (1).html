@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let x= prompt("Enter the string")
+    let countCharacters = (string) => {
+        let count = 1;
+        for (let i = 0; i < string.length; i++) {
+            for(let j=i;j<string.length;j++){
+            if (string[i] === string[j+1]) {
+            count++;
+            string=string.replace(string[j],'')
+           }}
+            document.write(`${string[i]} occur ${count} times `);
+            count = 1;
+            }};
+        countCharacters(x);
+        </script>
+</body>
+</html>

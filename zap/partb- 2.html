@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    let arr = [],
+    set = new Set();
+    let users = ["Kruthina","U","abc","xyz"];
+    for(let i = 0;i<users.length;i++)
+    {
+arr.push(users[i]);
+set.add(users[i]);
+    }
+    console.log(arr);
+    console.log(set);
+    console.time('Array');
+    let res1 = arr.indexOf("Kruthina") !== -1;
+    console.log(res1);
+    console.timeEnd('Array');
+    console.time('Set');
+    let res2 = set.has("Kruthina");
+    console.log(res2);
+    console.timeEnd('Set');
+</script>
+</body>
+</html>

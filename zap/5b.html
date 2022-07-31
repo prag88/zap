@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<body>
+    <input id="Inp"/>
+    <button id="Btn">Submit</button>
+
+    <script>
+        var Inp = document.getElementById("Inp");
+        var Btn = document.getElementById("Btn");
+        Btn.addEventListener("click", function(){
+            var Inp = document.getElementById("Inp").value;
+            if(Inp.toLowerCase() == Inp)
+            {
+                Inp = Inp.toUpperCase();
+            }
+            else
+            {
+                Inp = Inp.toLowerCase();
+            }
+            document.getElementById("Inp").value = Inp;
+        });
+    </script>
+</body>
+</html>
